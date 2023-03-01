@@ -2,6 +2,9 @@
 
 We want to train an AI system to play a simple game of Pong, a two-player table tennis game, using reinforcement learning.
 
+![](image.png)
+
+
 # Vision Statement:  
 
 To develop an AI system that can learn to play Pong through trial and error, and eventually beat human players at the game.
@@ -39,3 +42,30 @@ High level requirements: Configure and deploy the AI system to a cloud server, e
 6. Develop a testing framework to evaluate the system's performance against human players or other AI systems, and use this framework to iteratively improve the system's performance.
 7. Optimize the algorithm's hyperparameters and neural network architecture to improve its performance and reduce training time.
 8. Write clean, well-documented code that adheres to industry best practices and is easy to maintain and extend.
+
+
+
+## Reinforcement Pseudocode
+
+```
+Initialize Q(s, a) arbitrarily
+Initialize environment and agent
+Set hyperparameters:
+    learning_rate
+    discount_factor
+    exploration_rate
+    exploration_decay_rate
+For each episode:
+    Reset the environment
+    Observe the initial state s
+    Set done to False
+    While not done:
+        With probability ε select a random action a, otherwise select a = argmaxQ(s, a)
+        Take action a and observe the reward r and the next state s'
+        Update Q(s, a) using the Q-learning update:
+            Q(s, a) ← Q(s, a) + learning_rate * (r + discount_factor * maxQ(s', a') - Q(s, a))
+        Update the state to s'
+        If the game is over, set done to True
+    Update the exploration rate:
+        ε ← ε * exploration_decay_rate
+```

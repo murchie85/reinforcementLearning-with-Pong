@@ -27,6 +27,7 @@ class Ball(pygame.sprite.Sprite):
         self.rect.y = screen_height / 2
         self.screen_width = screen_width
         self.screen_height = screen_height
+        self.speed_x = random.randrange(-2,2)
     # Inside the Ball class:
     def update(self, player_paddle, ai_paddle):
         # Check for collision with the player paddle
