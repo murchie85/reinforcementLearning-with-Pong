@@ -31,9 +31,11 @@ High level requirements: Configure and deploy the AI system to a cloud server, e
 # Technical Delvierables 
 
 
-1. Develop a deep reinforcement learning algorithm that can learn to play Pong using input from a game emulator.
-2. Train the algorithm on a dataset of Pong games, using techniques such as Q-learning or policy gradient methods.
-3. Implement a game engine that can simulate games of Pong, and integrate the reinforcement learning algorithm with the game engine.
-4. Develop a testing framework to evaluate the system's performance against human players or other AI systems, and use this framework to iteratively improve the system's performance.
-5. Optimize the algorithm's hyperparameters and neural network architecture to improve its performance and reduce training time.
-6. Write clean, well-documented code that adheres to industry best practices and is easy to maintain and extend.
+1. Develop a game emulator in Pygame that can simulate games of Pong with two paddles and a ball.
+2. Create an interface for the game emulator that allows the reinforcement learning algorithm to input game states and receive game actions.
+3. Develop a deep reinforcement learning algorithm that can learn to play Pong using input from a game emulator.
+4. Train the algorithm on a dataset of Pong games, using techniques such as Q-learning or policy gradient methods.
+5. Implement a game engine that can simulate games of Pong, and integrate the reinforcement learning algorithm with the game engine.
+6. Develop a testing framework to evaluate the system's performance against human players or other AI systems, and use this framework to iteratively improve the system's performance.
+7. Optimize the algorithm's hyperparameters and neural network architecture to improve its performance and reduce training time.
+8. Write clean, well-documented code that adheres to industry best practices and is easy to maintain and extend.
